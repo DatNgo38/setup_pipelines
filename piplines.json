@@ -1,0 +1,1651 @@
+{
+    "pipelines": [
+      {
+        "startId": "org.unidata.mdm.matching.data[RECORD_UPSERT_MATCHING_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.matching.data.record.upsert.matching.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.matching.data[RECORD_UPSERT_MATCHING_START]",
+            "description": "org.unidata.mdm.matching.data.record.upsert.matching.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[RECORD_UPSERT_MATCHING_PREPARE]",
+            "description": "org.unidata.mdm.matching.data.record.upsert.matching.prepare.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[DATA_RECORD_MATCHING_MAPPING]",
+            "description": "org.unidata.mdm.matching.data.record.matching.mapping.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[RECORD_UPSERT_MATCHING_POINT]",
+            "description": "org.unidata.mdm.matching.data.record.upsert.matching.point.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.matching.data[RECORD_UPSERT_MATCHING_FINISH]",
+            "description": "org.unidata.mdm.matching.data.record.upsert.matching.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.dq.core[QUALITY_DRAFT_PUBLISH_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.dq.core.dq.draft.publish.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.dq.core[QUALITY_DRAFT_PUBLISH_START]",
+            "description": "org.unidata.mdm.dq.core.dq.draft.publish.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.dq.core[QUALITY_DRAFT_PUBLISH_FINISH]",
+            "description": "org.unidata.mdm.dq.core.dq.draft.publish.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RELATION_DRAFT_GET_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.relation.draft.get.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_GET_START]",
+            "description": "org.unidata.mdm.data.relation.draft.get.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_GET_FINISH]",
+            "description": "org.unidata.mdm.data.relation.draft.get.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RELATION_DRAFT_PUBLISH_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.relation.draft.publish.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_PUBLISH_START]",
+            "description": "org.unidata.mdm.data.relation.draft.publish.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_PUBLISH_PROCESS]",
+            "description": "Performs move of relation draft data to main persistent store during publication."
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_PUBLISH_INDEXING]",
+            "description": "Removes relation draft data from the draft index (after successful publication)."
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_PUBLISH_FINISH]",
+            "description": "org.unidata.mdm.data.relation.draft.publish.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[BATCH_RECORD_UPSERT_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.batch.record.upsert.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_UPSERT_START]",
+            "description": "org.unidata.mdm.data.batch.record.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_UPSERT_PROCESS]",
+            "description": "org.unidata.mdm.data.batch.record.upsert.process.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_UPSERT_PERSISTENCE]",
+            "description": "org.unidata.mdm.data.batch.record.upsert.persistence.description"
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_CONNECTOR]",
+            "description": "org.unidata.mdm.data.batch.relations.upsert.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.matching.data[BATCH_RECORD_UPSERT_MATCHING_CONNECTOR]",
+            "description": "org.unidata.mdm.matching.data.batch.record.upsert.matching.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.batch.record.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_RESTORE_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.record.restore.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_RESTORE_START]",
+            "description": "org.unidata.mdm.data.record.restore.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_RESTORE_ACCESS]",
+            "description": "org.unidata.mdm.data.record.restore.access.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_RESTORE_MEASURED]",
+            "description": "org.unidata.mdm.data.record.restore.measured.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_RESTORE_PERIOD_CHECK]",
+            "description": "org.unidata.mdm.data.record.restore.period.check.description"
+          },
+          {
+            "segmentType": "SELECTOR",
+            "id": "org.unidata.mdm.data[RECORD_RESTORE_SELECTOR]",
+            "description": "org.unidata.mdm.data.record.restore.selector.description",
+            "outcomeSegments": {
+              "[DRAFT]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_RESTORE_MODBOX]",
+                  "description": "org.unidata.mdm.data.record.restore.modbox.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_RESTORE_TIMELINE]",
+                  "description": "org.unidata.mdm.data.record.restore.timeline.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_RESTORE_DRAFT]",
+                  "description": "org.unidata.mdm.data.record.restore.draft.description"
+                }
+              ],
+              "[REGULAR]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_RESTORE_MODBOX]",
+                  "description": "org.unidata.mdm.data.record.restore.modbox.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_RESTORE_TIMELINE]",
+                  "description": "org.unidata.mdm.data.record.restore.timeline.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_RESTORE_VALIDATE]",
+                  "description": "org.unidata.mdm.data.record.restore.validate.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_RESTORE_INDEXING]",
+                  "description": "org.unidata.mdm.data.record.restore.indexing.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_RESTORE_PERSISTENCE]",
+                  "description": "org.unidata.mdm.data.record.restore.persistence.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_RESTORE_REFRESH]",
+                  "description": "The point, performing refresh of caches and other temporary storage, for the record, being restored."
+                }
+              ]
+            },
+            "outcomeLinks": {},
+            "outcomeNames": [
+              "[DRAFT]",
+              "[REGULAR]"
+            ]
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.data[RELATIONS_RESTORE_CONNECTOR]",
+            "description": "org.unidata.mdm.data.relations.restore.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_RESTORE_FINISH]",
+            "description": "org.unidata.mdm.data.record.restore.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[MODEL_DRAFT_UPSERT_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.model.draft.upsert.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[MODEL_DRAFT_UPSERT_START]",
+            "description": "org.unidata.mdm.data.model.draft.upsert.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[MODEL_DRAFT_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.model.draft.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_DRAFT_REMOVE_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.record.draft.remove.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_REMOVE_START]",
+            "description": "Starts removal of record draft data (during draft removal upon user wish)."
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_REMOVE_FINISH]",
+            "description": "Finishes removal of record draft data (during draft removal upon user request)."
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.dq.core[QUALITY_DRAFT_GET_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.dq.core.dq.get.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.dq.core[QUALITY_DRAFT_GET_START]",
+            "description": "org.unidata.mdm.dq.core.dq.get.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.dq.core[QUALITY_DRAFT_GET_FINISH]",
+            "description": "org.unidata.mdm.dq.core.dq.get.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_PREVIEW_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.record.preview.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_PREVIEW_START]",
+            "description": "org.unidata.mdm.data.record.preview.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_READ_ACCESS]",
+            "description": "org.unidata.mdm.data.record.read.security.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_MERGE_TIMELINE]",
+            "description": "org.unidata.mdm.data.record.merge.timeline.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_PREVIEW_FINISH]",
+            "description": "org.unidata.mdm.data.record.preview.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.matching.data[RECORD_DELETE_MATCHING_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.matching.data.record.delete.matching.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.matching.data[RECORD_DELETE_MATCHING_START]",
+            "description": "org.unidata.mdm.matching.data.record.delete.matching.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[RECORD_DELETE_MATCHING_PREPARE]",
+            "description": "org.unidata.mdm.matching.data.record.delete.matching.prepare.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[DATA_RECORD_MATCHING_MAPPING]",
+            "description": "org.unidata.mdm.matching.data.record.matching.mapping.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[RECORD_DELETE_MATCHING_POINT]",
+            "description": "org.unidata.mdm.matching.data.record.delete.matching.point.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.matching.data[RECORD_DELETE_MATCHING_FINISH]",
+            "description": "org.unidata.mdm.matching.data.record.delete.matching.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.matching.data[BATCH_RECORD_DELETE_MATCHING_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.batch.record.delete.matching.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.matching.data[BATCH_RECORD_DELETE_MATCHING_START]",
+            "description": "org.unidata.mdm.matching.data.batch.record.delete.matching.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[BATCH_RECORD_DELETE_MATCHING_PROCESS]",
+            "description": "org.unidata.mdm.matching.data.batch.record.delete.matching.process.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[BATCH_RECORD_DELETE_MATCHING_PERSISTENCE]",
+            "description": "org.unidata.mdm.matching.data.batch.record.delete.matching.persistence.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.matching.data[BATCH_RECORD_DELETE_MATCHING_FINISH]",
+            "description": "org.unidata.mdm.matching.data.batch.record.delete.matching.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RELATION_UPSERT_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.relation.upsert.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RELATION_UPSERT_START]",
+            "description": "org.unidata.mdm.data.relation.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_UPSERT_ACCESS]",
+            "description": "org.unidata.mdm.data.relations.upsert.access.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_UPSERT_MEASURED]",
+            "description": "org.unidata.mdm.data.relation.upsert.measured.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_UPSERT_PERIOD_CHECK]",
+            "description": "org.unidata.mdm.data.relation.upsert.check.period.description"
+          },
+          {
+            "segmentType": "SELECTOR",
+            "id": "org.unidata.mdm.data[RELATION_UPSERT_SELECTOR]",
+            "description": "org.unidata.mdm.data.relation.upsert.selector.description",
+            "outcomeSegments": {
+              "[DRAFT]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_UPSERT_MODBOX]",
+                  "description": "org.unidata.mdm.data.relation.upsert.modbox.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_UPSERT_TIMELINE]",
+                  "description": "org.unidata.mdm.data.relation.upsert.timeline.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_UPSERT_DRAFT]",
+                  "description": "org.unidata.mdm.data.relations.upsert.draft.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_UPSERT_POSTPROCESSING]",
+                  "description": "org.unidata.mdm.data.relation.upsert.post.process.description"
+                }
+              ],
+              "[REGULAR]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_UPSERT_MODBOX]",
+                  "description": "org.unidata.mdm.data.relation.upsert.modbox.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_UPSERT_TIMELINE]",
+                  "description": "org.unidata.mdm.data.relation.upsert.timeline.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_UPSERT_VALIDATE]",
+                  "description": "org.unidata.mdm.data.relations.upsert.validate.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_UPSERT_INDEXING]",
+                  "description": "org.unidata.mdm.data.relation.upsert.indexing.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_UPSERT_PERSISTENCE]",
+                  "description": "org.unidata.mdm.data.relation.upsert.persistence.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_UPSERT_POSTPROCESSING]",
+                  "description": "org.unidata.mdm.data.relation.upsert.post.process.description"
+                }
+              ]
+            },
+            "outcomeLinks": {},
+            "outcomeNames": [
+              "[DRAFT]",
+              "[REGULAR]"
+            ]
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RELATION_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.relation.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.matching.data[BATCH_RECORD_UPSERT_MATCHING_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.batch.record.upsert.matching.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.matching.data[BATCH_RECORD_UPSERT_MATCHING_START]",
+            "description": "org.unidata.mdm.matching.data.batch.record.upsert.matching.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[BATCH_RECORD_UPSERT_MATCHING_PROCESS]",
+            "description": "org.unidata.mdm.matching.data.batch.record.upsert.matching.process.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[BATCH_RECORD_UPSERT_MATCHING_PERSISTENCE]",
+            "description": "org.unidata.mdm.matching.data.batch.record.upsert.matching.persistence.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.matching.data[BATCH_RECORD_UPSERT_MATCHING_FINISH]",
+            "description": "org.unidata.mdm.matching.data.batch.record.upsert.matching.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_MERGE_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.record.merge.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_MERGE_START]",
+            "description": "org.unidata.mdm.data.record.merge.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_MERGE_ACCESS]",
+            "description": "org.unidata.mdm.data.record.merge.access.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_MERGE_TIMELINE]",
+            "description": "org.unidata.mdm.data.record.merge.timeline.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_MERGE_INDEXING]",
+            "description": "org.unidata.mdm.data.record.merge.indexing.description"
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.data[RELATIONS_MERGE_CONNECTOR]",
+            "description": "org.unidata.mdm.data.relations.merge.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_MERGE_PERSISTENCE]",
+            "description": "org.unidata.mdm.data.record.merge.persistence.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_MERGE_OVERRIDE]",
+            "description": "org.unidata.mdm.data.record.merge.override.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_MERGE_FAVORITES]",
+            "description": "org.unidata.mdm.data.record.merge.favorites.description"
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.matching.data[RECORD_MERGE_MATCHING_CONNECTOR]",
+            "description": "org.unidata.mdm.matching.data.record.merge.matching.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_MERGE_FINISH]",
+            "description": "org.unidata.mdm.data.record.merge.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.dq.core[QUALITY_DRAFT_UPSERT_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.dq.core.dq.draft.upsert.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.dq.core[QUALITY_DRAFT_UPSERT_START]",
+            "description": "org.unidata.mdm.dq.core.dq.draft.upsert.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.dq.core[QUALITY_DRAFT_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.dq.core.dq.draft.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RELATION_DELETE_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.relation.delete.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RELATION_DELETE_START]",
+            "description": "org.unidata.mdm.data.relation.delete.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_DELETE_ACCESS]",
+            "description": "org.unidata.mdm.data.relation.delete.access.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_DELETE_MEASURED]",
+            "description": "org.unidata.mdm.data.relation.delete.measured.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_DELETE_PERIOD_CHECK]",
+            "description": "org.unidata.mdm.data.relation.delete.check.period.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_DELETE_MODBOX]",
+            "description": "org.unidata.mdm.data.relation.delete.modbox.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_DELETE_TIMELINE]",
+            "description": "org.unidata.mdm.data.relation.delete.timeline.description"
+          },
+          {
+            "segmentType": "SELECTOR",
+            "id": "org.unidata.mdm.data[RELATION_DELETE_SELECTOR]",
+            "description": "org.unidata.mdm.data.relation.delete.selector.description",
+            "outcomeSegments": {
+              "[DRAFT]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_DELETE_DRAFT]",
+                  "description": "org.unidata.mdm.data.relations.delete.draft.description"
+                }
+              ],
+              "[REGULAR]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_DELETE_INDEXING]",
+                  "description": "org.unidata.mdm.data.relation.delete.indexing.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_DELETE_PERSISTENCE]",
+                  "description": "org.unidata.mdm.data.relation.delete.persistence.description"
+                }
+              ]
+            },
+            "outcomeLinks": {},
+            "outcomeNames": [
+              "[DRAFT]",
+              "[REGULAR]"
+            ]
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RELATION_DELETE_FINISH]",
+            "description": "org.unidata.mdm.data.relation.delete.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[MODEL_DRAFT_GET_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.model.get.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[MODEL_DRAFT_GET_START]",
+            "description": "org.unidata.mdm.data.model.get.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[MODEL_DRAFT_GET_FINISH]",
+            "description": "org.unidata.mdm.data.model.get.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_DELETE_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.record.delete.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_DELETE_START]",
+            "description": "org.unidata.mdm.data.record.delete.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_DELETE_ACCESS]",
+            "description": "org.unidata.mdm.data.record.delete.security.check.description"
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.data[RELATIONS_DELETE_CONNECTOR]",
+            "description": "org.unidata.mdm.data.relations.delete.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_DELETE_MEASURED]",
+            "description": "org.unidata.mdm.data.record.delete.measured.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_DELETE_PERIOD_CHECK]",
+            "description": "org.unidata.mdm.data.record.delete.period.check.description"
+          },
+          {
+            "segmentType": "SELECTOR",
+            "id": "org.unidata.mdm.data[RECORD_DELETE_SELECTOR]",
+            "description": "org.unidata.mdm.data.record.delete.selector.description",
+            "outcomeSegments": {
+              "[DRAFT]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_DELETE_MODBOX]",
+                  "description": "org.unidata.mdm.data.record.delete.modbox.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_DELETE_TIMELINE]",
+                  "description": "org.unidata.mdm.data.record.delete.timeline.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_DELETE_DRAFT]",
+                  "description": "org.unidata.mdm.data.record.delete.draft.description"
+                }
+              ],
+              "[REGULAR]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_DELETE_DATA_CONSISTENCY]",
+                  "description": "org.unidata.mdm.data.record.delete.data.consistency.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_DELETE_MODBOX]",
+                  "description": "org.unidata.mdm.data.record.delete.modbox.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_DELETE_TIMELINE]",
+                  "description": "org.unidata.mdm.data.record.delete.timeline.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_DELETE_INDEXING]",
+                  "description": "org.unidata.mdm.data.record.delete.indexing.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_DELETE_PERSISTENCE]",
+                  "description": "org.unidata.mdm.data.record.delete.persistence.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_DELETE_REFRESH]",
+                  "description": "The point, performing refresh of caches and other temporary storage, for the record, being deleted."
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_DELETE_FAVORITES]",
+                  "description": "org.unidata.mdm.data.record.delete.favorites.description"
+                },
+                {
+                  "segmentType": "CONNECTOR",
+                  "id": "org.unidata.mdm.matching.data[RECORD_DELETE_MATCHING_CONNECTOR]",
+                  "description": "org.unidata.mdm.matching.data.record.delete.matching.connector.description",
+                  "startId": null,
+                  "subjectId": null
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_AUDIT_EVENT]",
+                  "description": "This segment is a sample implementation of how a successful record event could be reported to audit or to any external consumer via messaging domain. It should be placed as late as possible in the pipeline in the regular segments section."
+                },
+                {
+                  "segmentType": "FALLBACK",
+                  "id": "org.unidata.mdm.data[RECORD_AUDIT_FALLBACK]",
+                  "description": "This segment is a sample implementation of how an unsuccessful record event could be reported to audit or to any external consumer via messaging domain. It should be placed in the fallback section in the pipeline."
+                }
+              ]
+            },
+            "outcomeLinks": {},
+            "outcomeNames": [
+              "[DRAFT]",
+              "[REGULAR]"
+            ]
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_DELETE_FINISH]",
+            "description": "org.unidata.mdm.data.record.delete.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RELATION_DRAFT_REMOVE_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.relation.draft.remove.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_REMOVE_START]",
+            "description": "Starts removal of relation draft data (during draft removal upon user request)."
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_REMOVE_FINISH]",
+            "description": "Finishes removal of relation draft data (during draft removal upon user request)."
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_GET_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.record.get.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_GET_START]",
+            "description": "org.unidata.mdm.data.record.get.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_READ_ACCESS]",
+            "description": "org.unidata.mdm.data.record.read.security.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_GET_DIFF]",
+            "description": "org.unidata.mdm.data.record.get.diff.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_GET_VISTORY]",
+            "description": "org.unidata.mdm.data.record.get.vistory.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_GET_ATTRIBUTES_POSTPROCESSING]",
+            "description": "org.unidata.mdm.data.record.get.post.process.description"
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.data[RELATIONS_GET_CONNECTOR]",
+            "description": "org.unidata.mdm.data.relations.get.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.dq.data[RECORD_GET_QUALITY_CONNECTOR]",
+            "description": "org.unidata.mdm.dq.data.record.get.quality.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.matching.data[RECORD_GET_MATCHING_CONNECTOR]",
+            "description": "org.unidata.mdm.matching.data.record.get.matching.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_GET_FINISH]",
+            "description": "org.unidata.mdm.data.record.get.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_UPSERT_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.record.upsert.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_UPSERT_START]",
+            "description": "org.unidata.mdm.data.record.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_UPSERT_ACCESS]",
+            "description": "org.unidata.mdm.data.record.upsert.access.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_UPSERT_MEASURED]",
+            "description": "org.unidata.mdm.data.record.upsert.measured.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_UPSERT_PERIOD_CHECK]",
+            "description": "org.unidata.mdm.data.record.upsert.period.check.description"
+          },
+          {
+            "segmentType": "SELECTOR",
+            "id": "org.unidata.mdm.data[RECORD_UPSERT_SELECTOR]",
+            "description": "org.unidata.mdm.data.record.upsert.selector.description",
+            "outcomeSegments": {
+              "[DRAFT]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_MODBOX]",
+                  "description": "org.unidata.mdm.data.record.upsert.modbox.init.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_TIMELINE]",
+                  "description": "org.unidata.mdm.data.record.upsert.timeline.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_DRAFT]",
+                  "description": "org.unidata.mdm.data.record.upsert.draft.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_POSTPROCESSING]",
+                  "description": "org.unidata.mdm.data.record.upsert.post.process.description"
+                },
+                {
+                  "segmentType": "CONNECTOR",
+                  "id": "org.unidata.mdm.data[RELATIONS_UPSERT_CONNECTOR]",
+                  "description": "org.unidata.mdm.data.relations.upsert.connector.description",
+                  "startId": null,
+                  "subjectId": null
+                },
+                {
+                  "segmentType": "CONNECTOR",
+                  "id": "org.unidata.mdm.data[RELATIONS_DELETE_CONNECTOR]",
+                  "description": "org.unidata.mdm.data.relations.delete.connector.description",
+                  "startId": null,
+                  "subjectId": null
+                }
+              ],
+              "[REGULAR]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_MODBOX]",
+                  "description": "org.unidata.mdm.data.record.upsert.modbox.init.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_TIMELINE]",
+                  "description": "org.unidata.mdm.data.record.upsert.timeline.description"
+                },
+                {
+                  "segmentType": "CONNECTOR",
+                  "id": "org.unidata.mdm.dq.data[RECORD_UPSERT_QUALITY_CONNECTOR]",
+                  "description": "org.unidata.mdm.dq.data.record.upsert.quality.connector.description",
+                  "startId": null,
+                  "subjectId": null
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_VALIDATE]",
+                  "description": "org.unidata.mdm.data.record.upsert.validate.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_INDEXING]",
+                  "description": "org.unidata.mdm.data.record.upsert.indexing.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_LOB_SUBMIT]",
+                  "description": "org.unidata.mdm.data.record.upsert.lob.submit.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_PERSISTENCE]",
+                  "description": "org.unidata.mdm.data.record.upsert.persistence.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_REFRESH]",
+                  "description": "The point, performing refresh of caches and other temporary storage, for the record, being upserted."
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_UPSERT_POSTPROCESSING]",
+                  "description": "org.unidata.mdm.data.record.upsert.post.process.description"
+                },
+                {
+                  "segmentType": "CONNECTOR",
+                  "id": "org.unidata.mdm.data[RELATIONS_UPSERT_CONNECTOR]",
+                  "description": "org.unidata.mdm.data.relations.upsert.connector.description",
+                  "startId": null,
+                  "subjectId": null
+                },
+                {
+                  "segmentType": "CONNECTOR",
+                  "id": "org.unidata.mdm.data[RELATIONS_DELETE_CONNECTOR]",
+                  "description": "org.unidata.mdm.data.relations.delete.connector.description",
+                  "startId": null,
+                  "subjectId": null
+                },
+                {
+                  "segmentType": "CONNECTOR",
+                  "id": "org.unidata.mdm.matching.data[RECORD_UPSERT_MATCHING_CONNECTOR]",
+                  "description": "org.unidata.mdm.matching.data.record.upsert.matching.connector.description",
+                  "startId": null,
+                  "subjectId": null
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RECORD_AUDIT_EVENT]",
+                  "description": "This segment is a sample implementation of how a successful record event could be reported to audit or to any external consumer via messaging domain. It should be placed as late as possible in the pipeline in the regular segments section."
+                },
+                {
+                  "segmentType": "FALLBACK",
+                  "id": "org.unidata.mdm.data[RECORD_AUDIT_FALLBACK]",
+                  "description": "This segment is a sample implementation of how an unsuccessful record event could be reported to audit or to any external consumer via messaging domain. It should be placed in the fallback section in the pipeline."
+                }
+              ]
+            },
+            "outcomeLinks": {},
+            "outcomeNames": [
+              "[DRAFT]",
+              "[REGULAR]"
+            ]
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.record.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RELATION_MERGE_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.relations.merge.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RELATION_MERGE_START]",
+            "description": "org.unidata.mdm.data.relations.merge.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_MERGE_ACCESS]",
+            "description": "org.unidata.mdm.data.relation.merge.access.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_MERGE_TIMELINE]",
+            "description": "org.unidata.mdm.data.relation.merge.timeline.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_MERGE_INDEXING]",
+            "description": "org.unidata.mdm.data.relation.merge.indexing.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_MERGE_PERSISTENCE]",
+            "description": "org.unidata.mdm.data.relation.merge.persistence.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RELATION_MERGE_FINISH]",
+            "description": "org.unidata.mdm.data.relation.merge.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_DRAFT_UPSERT_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.record.draft.upsert.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_UPSERT_START]",
+            "description": "org.unidata.mdm.data.record.draft.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_UPSERT_PROCESS]",
+            "description": "org.unidata.mdm.data.record.draft.upsert.process.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_UPSERT_INDEXING]",
+            "description": "Indexes draft records data to a dedicated index for draft data. This point must reside AFTER the data processing point (org.unidata.mdm.data[RECORD_DRAFT_UPSERT_PROCESS]) in the pipeline."
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.record.draft.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.matching.core[MATCHING_DRAFT_PUBLISH_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.matching.core.matching.draft.publish.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.matching.core[MATCHING_DRAFT_PUBLISH_START]",
+            "description": "org.unidata.mdm.matching.core.matching.draft.publish.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.matching.core[MATCHING_DRAFT_PUBLISH_FINISH]",
+            "description": "org.unidata.mdm.matching.core.matching.draft.publish.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.matching.core[MATCHING_DRAFT_UPSERT_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.matching.core.matching.draft.upsert.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.matching.core[MATCHING_DRAFT_UPSERT_START]",
+            "description": "org.unidata.mdm.matching.core.matching.draft.upsert.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.matching.core[MATCHING_DRAFT_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.matching.core.matching.draft.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[MODEL_DRAFT_PUBLISH_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.model.draft.publish.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[MODEL_DRAFT_PUBLISH_START]",
+            "description": "org.unidata.mdm.data.model.draft.publish.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[MODEL_DRAFT_PUBLISH_FINISH]",
+            "description": "org.unidata.mdm.data.model.draft.publish.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.core[MODEL_REFRESH_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.core.model.refresh.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.core[MODEL_REFRESH_START]",
+            "description": "org.unidata.mdm.core.model.refresh.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.core[MODEL_REFRESH_POINT]",
+            "description": "org.unidata.mdm.core.model.refresh.point.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.core[MODEL_REFRESH_FINISH]",
+            "description": "org.unidata.mdm.core.model.refresh.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.batch.relations.upsert.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_START]",
+            "description": "org.unidata.mdm.data.batch.relations.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_PROCESS]",
+            "description": "org.unidata.mdm.data.batch.relations.upsert.process.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_PERSISTENCE]",
+            "description": "org.unidata.mdm.data.batch.relations.upsert.persistence.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.batch.relations.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[BATCH_RELATIONS_DELETE_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.batch.record.delete.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_DELETE_START]",
+            "description": "org.unidata.mdm.data.batch.relations.delete.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_DELETE_PROCESS]",
+            "description": "org.unidata.mdm.data.batch.relations.delete.process.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_DELETE_PERSISTENCE]",
+            "description": "org.unidata.mdm.data.batch.relations.delete.persistence.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_DELETE_FINISH]",
+            "description": "org.unidata.mdm.data.batch.relations.delete.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.matching.core[MATCHING_DRAFT_GET_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.matching.core.matching.get.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.matching.core[MATCHING_DRAFT_GET_START]",
+            "description": "org.unidata.mdm.matching.core.matching.get.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.matching.core[MATCHING_DRAFT_GET_FINISH]",
+            "description": "org.unidata.mdm.matching.core.matching.get.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.dq.data[RECORD_UPSERT_QUALITY_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.dq.data.record.upsert.quality.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.dq.data[RECORD_UPSERT_QUALITY_START]",
+            "description": "org.unidata.mdm.dq.data.record.upsert.quality.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.dq.data[RECORD_UPSERT_QUALITY_POINT]",
+            "description": "org.unidata.mdm.dq.data.record.upsert.quality.point.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.dq.data[RECORD_UPSERT_QUALITY_GATE]",
+            "description": "org.unidata.mdm.dq.data.record.upsert.quality.gate.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.dq.data[RECORD_UPSERT_QUALITY_FINISH]",
+            "description": "org.unidata.mdm.dq.data.record.upsert.quality.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_DRAFT_PUBLISH_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.record.draft.publish.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_PUBLISH_START]",
+            "description": "org.unidata.mdm.data.record.draft.publish.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_PUBLISH_PROCESS]",
+            "description": "Performs move of the draft data to main persistent store during publication."
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_PUBLISH_INDEXING]",
+            "description": "Removes record draft data from the draft index (after successful publication)."
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_PUBLISH_FINISH]",
+            "description": "org.unidata.mdm.data.record.draft.publish.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RELATION_RESTORE_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.relation.restore.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RELATION_RESTORE_START]",
+            "description": "org.unidata.mdm.data.relation.restore.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_RESTORE_ACCESS]",
+            "description": "org.unidata.mdm.data.relation.restore.access.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_RESTORE_MEASURED]",
+            "description": "org.unidata.mdm.data.relation.restore.measured.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_RESTORE_PERIOD_CHECK]",
+            "description": "org.unidata.mdm.data.relation.restore.check.period.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_RESTORE_MODBOX]",
+            "description": "org.unidata.mdm.data.relation.restore.modbox.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_RESTORE_TIMELINE]",
+            "description": "org.unidata.mdm.data.relation.restore.timeline.description"
+          },
+          {
+            "segmentType": "SELECTOR",
+            "id": "org.unidata.mdm.data[RELATION_RESTORE_SELECTOR]",
+            "description": "org.unidata.mdm.data.relation.restore.selector.description",
+            "outcomeSegments": {
+              "[DRAFT]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_RESTORE_DRAFT]",
+                  "description": "org.unidata.mdm.data.relations.restore.draft.description"
+                }
+              ],
+              "[REGULAR]": [
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_RESTORE_INDEXING]",
+                  "description": "org.unidata.mdm.data.relation.restore.indexing.description"
+                },
+                {
+                  "segmentType": "POINT",
+                  "id": "org.unidata.mdm.data[RELATION_RESTORE_PERSISTENCE]",
+                  "description": "org.unidata.mdm.data.relation.restore.persistence.description"
+                }
+              ]
+            },
+            "outcomeLinks": {},
+            "outcomeNames": [
+              "[DRAFT]",
+              "[REGULAR]"
+            ]
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RELATION_RESTORE_FINISH]",
+            "description": "org.unidata.mdm.data.relation.restore.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RELATION_GET_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.relations.get.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RELATION_GET_START]",
+            "description": "org.unidata.mdm.data.relations.get.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_GET_ACCESS]",
+            "description": "org.unidata.mdm.data.relations.get.access.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_GET_POSTPROCESSING]",
+            "description": "org.unidata.mdm.data.relation.get.post.process.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RELATION_GET_FINISH]",
+            "description": "org.unidata.mdm.data.relation.get.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_DRAFT_GET_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.record.draft.get.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_GET_START]",
+            "description": "org.unidata.mdm.data.record.draft.get.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_DRAFT_GET_FINISH]",
+            "description": "org.unidata.mdm.data.record.draft.get.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[BATCH_RECORD_DELETE_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.batch.record.delete.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_DELETE_START]",
+            "description": "org.unidata.mdm.data.batch.record.delete.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_DELETE_PROCESS]",
+            "description": "org.unidata.mdm.data.batch.record.delete.process.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_DELETE_PERSISTENCE]",
+            "description": "org.unidata.mdm.data.batch.record.delete.persistence.description"
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_DELETE_CONNECTOR]",
+            "description": "org.unidata.mdm.data.batch.relations.delete.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "CONNECTOR",
+            "id": "org.unidata.mdm.matching.data[BATCH_RECORD_DELETE_MATCHING_CONNECTOR]",
+            "description": "org.unidata.mdm.matching.data.batch.record.delete.matching.connector.description",
+            "startId": null,
+            "subjectId": null
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_DELETE_FINISH]",
+            "description": "org.unidata.mdm.data.batch.record.delete.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.core[MODEL_GET_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.core.model.get.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.core[MODEL_GET_START]",
+            "description": "org.unidata.mdm.core.model.get.start.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.core[MODEL_GET_FINISH]",
+            "description": "org.unidata.mdm.core.model.get.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.core[MODEL_UPSERT_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.core.model.get.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.core[MODEL_UPSERT_START]",
+            "description": "org.unidata.mdm.core.model.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.core[MODEL_UPSERT_POINT]",
+            "description": "org.unidata.mdm.core.model.upsert.point.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.core[MODEL_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.core.model.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.matching.data[RECORD_MERGE_MATCHING_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.matching.data.record.merge.matching.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.matching.data[RECORD_MERGE_MATCHING_START]",
+            "description": "org.unidata.mdm.matching.data.record.merge.matching.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[RECORD_MERGE_MATCHING_PREPARE]",
+            "description": "org.unidata.mdm.matching.data.record.merge.matching.prepare.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[DATA_RECORD_MATCHING_MAPPING]",
+            "description": "org.unidata.mdm.matching.data.record.matching.mapping.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.matching.data[RECORD_MERGE_MATCHING_POINT]",
+            "description": "org.unidata.mdm.matching.data.record.merge.matching.point.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.matching.data[RECORD_MERGE_MATCHING_FINISH]",
+            "description": "org.unidata.mdm.matching.data.record.merge.matching.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RELATION_DRAFT_UPSERT_START]",
+        "subjectId": "",
+        "description": "org.unidata.mdm.data.relation.draft.upsert.start.description",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_UPSERT_START]",
+            "description": "org.unidata.mdm.data.relation.draft.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_UPSERT_PROCESS]",
+            "description": "org.unidata.mdm.data.relation.draft.upsert.process.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_UPSERT_INDEXING]",
+            "description": "Indexes draft relation data to a dedicated index for draft data. This point must reside AFTER the data processing point (org.unidata.mdm.data[RELATION_DRAFT_UPSERT_PROCESS]) in the pipeline."
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RELATION_DRAFT_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.relation.draft.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RELATION_UPSERT_START]",
+        "subjectId": "${reindex-relations-worker-pipeline}",
+        "description": "Default fixed reindex relations item pipeline.",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RELATION_UPSERT_START]",
+            "description": "org.unidata.mdm.data.relation.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_UPSERT_TIMELINE]",
+            "description": "org.unidata.mdm.data.relation.upsert.timeline.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RELATION_UPSERT_INDEXING]",
+            "description": "org.unidata.mdm.data.relation.upsert.indexing.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RELATION_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.relation.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[BATCH_RECORD_UPSERT_START]",
+        "subjectId": "${reindex-records-bulk-pipeline}",
+        "description": "Default fixed reindex records bulk pipeline.",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_UPSERT_START]",
+            "description": "org.unidata.mdm.data.batch.record.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_UPSERT_PROCESS]",
+            "description": "org.unidata.mdm.data.batch.record.upsert.process.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_UPSERT_PERSISTENCE]",
+            "description": "org.unidata.mdm.data.batch.record.upsert.persistence.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[BATCH_RECORD_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.batch.record.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[RECORD_UPSERT_START]",
+        "subjectId": "${reindex-records-worker-pipeline}",
+        "description": "Default fixed reindex records item pipeline.",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[RECORD_UPSERT_START]",
+            "description": "org.unidata.mdm.data.record.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_UPSERT_TIMELINE]",
+            "description": "org.unidata.mdm.data.record.upsert.timeline.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[RECORD_UPSERT_INDEXING]",
+            "description": "org.unidata.mdm.data.record.upsert.indexing.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[RECORD_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.record.upsert.finish.description"
+          }
+        ]
+      },
+      {
+        "startId": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_START]",
+        "subjectId": "${reindex-relations-bulk-pipeline}",
+        "description": "Default fixed reindex relations bulk pipeline.",
+        "segments": [
+          {
+            "segmentType": "START",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_START]",
+            "description": "org.unidata.mdm.data.batch.relations.upsert.start.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_PROCESS]",
+            "description": "org.unidata.mdm.data.batch.relations.upsert.process.description"
+          },
+          {
+            "segmentType": "POINT",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_PERSISTENCE]",
+            "description": "org.unidata.mdm.data.batch.relations.upsert.persistence.description"
+          },
+          {
+            "segmentType": "FINISH",
+            "id": "org.unidata.mdm.data[BATCH_RELATIONS_UPSERT_FINISH]",
+            "description": "org.unidata.mdm.data.batch.relations.upsert.finish.description"
+          }
+        ]
+      }
+    ]
+}
